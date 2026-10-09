@@ -15,7 +15,7 @@ public final class DBConnection {
         return DriverManager.getConnection(
             System.getenv().getOrDefault(
                 "CAMPUSKART_DB_URL",
-                "jdbc:mysql://localhost:3306/campuskart?useSSL=false&serverTimezone=Asia/Kolkata"
+                "jdbc:mysql://localhost:3306/campuskart?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Kolkata"
             ),
             System.getenv().getOrDefault("CAMPUSKART_DB_USER", "root"),
             System.getenv().getOrDefault("CAMPUSKART_DB_PASSWORD", "")
