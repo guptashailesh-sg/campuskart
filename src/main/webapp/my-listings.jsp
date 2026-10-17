@@ -15,7 +15,7 @@
     <nav>
         <a href="marketplace">Marketplace</a>
         <a class="active" href="my-listings">My Listings</a>
-        <span class="user"><span class="avatar" aria-hidden="true">CK</span><%= session.getAttribute("userName") %></span>
+        <span class="user"><span class="avatar" aria-hidden="true"><%= session.getAttribute("userName") == null || session.getAttribute("userName").toString().trim().isEmpty() ? "?" : session.getAttribute("userName").toString().trim().substring(0, 1).toUpperCase() %></span><%= session.getAttribute("userName") %></span>
         <a class="btn small ghost" href="logout">Logout</a>
     </nav>
 </header>
